@@ -1,0 +1,40 @@
+---
+title: Introduction
+description: Docs site template overview — capabilities, content organization, and how to replace the sample content.
+---
+
+# Introduction
+
+> This is sample content of the docs site template. Replace it with your
+> own content when applying the template to a new project.
+
+This template is a ready-to-run bilingual docs site sub-app: MDX content,
+manifest-driven navigation, light/dark themes, and code highlighting are
+all wired up. You only need to replace the content tree and site config.
+
+## Capabilities
+
+- **MDX authoring**: use components directly in Markdown; frontmatter is
+  injected into the page title and description automatically.
+- **Bilingual content**: Chinese is the source language; other languages
+  may lag behind (a missing file renders an "untranslated" placeholder).
+- **Automatic navigation**: sidebar, breadcrumb, and prev/next are all
+  derived from the manifest and frontmatter.
+- **Reading experience**: heading TOC, one-click code copy, Shiki dual
+  theme highlighting.
+
+## Content organization
+
+Each doc is a `src/content/docs/<lang>/<slug>.mdx` file; the structure is
+declared once in `src/content/docs/manifest.ts`:
+
+| Part | Location | Responsibility |
+| --- | --- | --- |
+| Manifest | `content/docs/manifest.ts` | Groups and reading order (language-neutral) |
+| Doc body | `content/docs/<lang>/*.mdx` | Content and frontmatter titles |
+| Group labels | `locales/*.json` | `docs.groups.<id>` localized labels |
+
+## Next steps
+
+Read the [Quick Start](/docs/quick-start) to run the template and replace
+the content; see the [FAQ](/docs/faq) for common questions.

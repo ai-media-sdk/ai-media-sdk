@@ -1,0 +1,34 @@
+---
+title: 简介
+description: 文档站模板简介——模板能力、内容组织方式与替换示例内容的指引。
+---
+
+# 简介
+
+> 这是文档站模板的示例文档，应用到新项目时请替换为真实内容。
+
+本模板是一个开箱即用的双语文档站子应用：MDX 内容、manifest 驱动的导航、
+明暗主题与代码高亮均已就绪。你只需要替换内容目录与站点配置。
+
+## 模板能力
+
+- **MDX 写作**：Markdown 中可直接使用组件，frontmatter 自动注入页面标题与描述。
+- **双语内容**：中文为源语言，其他语言允许滞后（缺失即"未翻译"占位）。
+- **自动导航**：侧边栏、面包屑、上一篇/下一篇全部由 manifest 与 frontmatter 派生。
+- **阅读体验**：标题锚点目录（TOC）、代码块一键复制、Shiki 明暗双主题高亮。
+
+## 内容组织
+
+每篇文档是 `src/content/docs/<语言>/<slug>.mdx` 文件，结构由
+`src/content/docs/manifest.ts` 统一声明：
+
+| 部分 | 位置 | 职责 |
+| --- | --- | --- |
+| manifest | `content/docs/manifest.ts` | 分组与阅读顺序（语言无关） |
+| 文档正文 | `content/docs/<lang>/*.mdx` | 内容与 frontmatter 标题 |
+| 分组文案 | `locales/*.json` | `docs.groups.<id>` 多语言标签 |
+
+## 下一步
+
+阅读[快速开始](/docs/quick-start)了解如何运行与替换内容；常见问题见
+[FAQ](/docs/faq)。

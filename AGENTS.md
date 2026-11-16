@@ -16,6 +16,7 @@
 - `apps/web`: Next.js 16 controlled Playground; provider credentials stay on the server and must not be exposed to browser code.
 - `apps/site`: Vite + React Router public site (landing + BYO-key playground); pure frontend, no server, credentials stay in the browser.
 - `examples/*`: runnable provider/uploader examples. Copy the local `.env.example` to `.env`; never commit credentials.
+- `templates/docs`: reusable bilingual docs-site sub-app template extracted from `apps/site` (depends on `@workspace/ui`); sample content only, no business code. See its README for reuse steps.
 
 ## Commands
 

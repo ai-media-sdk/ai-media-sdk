@@ -1,0 +1,77 @@
+---
+title: Quick Start
+description: The shortest path to run the docs template, replace sample content, and deploy it to a new project.
+---
+
+# Quick Start
+
+> Sample template content — replace it with your own. This page also
+> demonstrates code blocks, tables, and blockquotes.
+
+## Run the template
+
+Install dependencies at the repo root, then start the template dev server:
+
+```bash
+bun install
+bun run --cwd templates/docs dev
+```
+
+Open `http://localhost:5175`; the root path redirects to the first doc in
+the visitor's language.
+
+## Replace the content
+
+### 1. Edit the site config
+
+`src/lib/site-config.ts` centralizes the site name, storage key prefix,
+and language set:
+
+```ts
+export const SITE_NAME = "Docs Template";
+export const SUPPORTED_LANGS = ["zh", "en"] as const;
+export const SOURCE_LANG: SiteLang = "zh";
+```
+
+### 2. Declare the doc structure
+
+Declare groups and slugs in reading order in
+`src/content/docs/manifest.ts`, then create the matching MDX files under
+`src/content/docs/<lang>/`:
+
+```mdx
+---
+title: Page title
+description: One-line summary used for the meta description.
+---
+
+# Page title
+
+The body supports **Markdown** and components.
+```
+
+### 3. Verify consistency
+
+```bash
+bun run --cwd templates/docs test
+```
+
+The tests check that the manifest and source-language files agree both
+ways, other languages have no orphan files, and all frontmatter is valid.
+
+## Deploy
+
+The build output lives in `dist/` with the `404.html` deep-link fallback
+generated automatically. For a GitHub Pages project site, set the base:
+
+```bash
+VITE_SITE_BASE=/my-repo/ bun run --cwd templates/docs build
+```
+
+| Scenario | Base setting |
+| --- | --- |
+| Root path / custom domain | Unset (defaults to `/`) |
+| GitHub Pages project site | `VITE_SITE_BASE=/<repo>/` |
+
+See the [FAQ](/docs/faq) for more questions, or back to the
+[Introduction](/docs/introduction).

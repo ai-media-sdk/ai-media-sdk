@@ -1,0 +1,41 @@
+{
+  "theme": {
+    "aria": "Theme",
+    "light": "Light",
+    "system": "System",
+    "dark": "Dark"
+  },
+  "langSwitcher": {
+    "aria": "Switch language"
+  },
+  "docs": {
+    "navAria": "Docs navigation",
+    "navToggle": "Open docs navigation",
+    "toc": "On this page",
+    "prev": "Previous",
+    "next": "Next",
+    "breadcrumb": "Docs",
+    "notFound": {
+      "title": "Doc not found",
+      "description": "The link may be outdated. Return to the docs home.",
+      "back": "Back to docs home"
+    },
+    "untranslated": {
+      "title": "Translation in progress",
+      "description": "This doc is being translated into the current language. You can read the Chinese version first.",
+      "readSource": "Read in Chinese"
+    },
+    "draft": {
+      "title": "Work in progress",
+      "description": "This doc is still being written. Stay tuned."
+    },
+    "code": {
+      "copy": "Copy code",
+      "copied": "Copied"
+    },
+    "groups": {
+      "gettingStarted": "Getting Started",
+      "resources": "Resources"
+    }
+  }
+}

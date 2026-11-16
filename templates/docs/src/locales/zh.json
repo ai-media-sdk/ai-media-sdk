@@ -1,0 +1,41 @@
+{
+  "theme": {
+    "aria": "主题模式",
+    "light": "浅色",
+    "system": "跟随系统",
+    "dark": "深色"
+  },
+  "langSwitcher": {
+    "aria": "切换语言"
+  },
+  "docs": {
+    "navAria": "文档导航",
+    "navToggle": "打开文档导航",
+    "toc": "本页目录",
+    "prev": "上一篇",
+    "next": "下一篇",
+    "breadcrumb": "文档",
+    "notFound": {
+      "title": "未找到该文档",
+      "description": "链接可能已失效，请返回文档首页。",
+      "back": "返回文档首页"
+    },
+    "untranslated": {
+      "title": "翻译进行中",
+      "description": "该文档的当前语言版本正在翻译中，可先阅读中文版本。",
+      "readSource": "阅读中文版"
+    },
+    "draft": {
+      "title": "编写进行中",
+      "description": "该文档仍在编写中，敬请期待。"
+    },
+    "code": {
+      "copy": "复制代码",
+      "copied": "已复制"
+    },
+    "groups": {
+      "gettingStarted": "入门",
+      "resources": "资源"
+    }
+  }
+}
