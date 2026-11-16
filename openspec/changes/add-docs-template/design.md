@@ -52,6 +52,10 @@ locales 只保留模板用到的键：`docs.*` 全量、`common.appName`、`lang
 
 `mdx-components` 保留 `DocsLangProvider`/`useDocsLang` 与基础映射导出；文档页渲染处以 `{ ...MDX_COMPONENTS, ...customComponents }` 形式合并（模板内 custom 为空对象并注释指引），README 写明业务组件（如站点 ProviderModelTable 一类）的注入方式。备选：context 注入自定义映射（多一层间接，当前无必要）。
 
+### D9: TOC 滚动高亮（交付后测试反馈补充）
+
+站点原 DocsToc 无 scroll spy，交付测试发现滚动时右侧目录不跟随高亮。模板补充：rAF 节流的 passive scroll/resize 监听，按 `getBoundingClientRect().top <= 96px`（对齐文章 `scroll-margin-top: 4rem` 加页头余量）取最后一个越线标题为当前章节；页底（scrollHeight - 2 容差）回退最后一节；顶部未越线时高亮第一节。点击条目立即 setActive 并加"程序化滚动锁"，平滑滚动期间高亮锁定目标（避免途经章节闪烁），到达/页底/用户 wheel·touch·keydown 打断/1.5s 超时后释放；`aria-current="location"` 标注。备选：IntersectionObserver（快滚/超高标题的边界处理更繁琐）；不修复（违背 TOC 可用性预期）。仅改模板，`apps/site` 不动。
+
 ## Risks / Trade-offs
 
 - [模板与站点代码漂移] → 一次性抽取为既定决策；README 记录来源（apps/site 对应目录），后续改进各自独立提交。

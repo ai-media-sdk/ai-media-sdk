@@ -52,3 +52,8 @@
 - [x] 9.1 bun run lint、bun run typecheck、bun run build、bun run test 全部通过
 - [x] 9.2 模板 dev 冒烟：双语切换、侧栏/TOC/面包屑/翻页、代码复制与主题切换、draft/未翻译/404 状态、移动端抽屉、/docs 遗留重定向
 - [x] 9.3 复查 diff（apps/site 零改动），在 main 提交
+
+## 10. TOC 滚动高亮（交付后测试反馈）
+
+- [x] 10.1 DocsToc 增加 scroll spy：rAF 节流的 scroll/resize 监听计算当前章节，页底回退最后一节，点击即时高亮 + aria-current，高亮态样式
+- [x] 10.2 验证（lint/typecheck/build/test + 浏览器滚动冒烟）并提交
