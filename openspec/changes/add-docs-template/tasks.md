@@ -51,4 +51,4 @@
 
 - [x] 9.1 bun run lint、bun run typecheck、bun run build、bun run test 全部通过
 - [x] 9.2 模板 dev 冒烟：双语切换、侧栏/TOC/面包屑/翻页、代码复制与主题切换、draft/未翻译/404 状态、移动端抽屉、/docs 遗留重定向
-- [ ] 9.3 复查 diff（apps/site 零改动），在 main 提交
+- [x] 9.3 复查 diff（apps/site 零改动），在 main 提交
