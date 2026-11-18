@@ -31,7 +31,7 @@ export function DocsSidebar({
   const groups = buildNav(lang);
 
   return (
-    <nav aria-label={t("docs.navAria")}>
+    <nav aria-label={t("docs.navAria")} className="h-full">
       <ScrollArea className="h-full">
         <div className="flex flex-col gap-5 pr-3 pb-6">
           {groups.map((group) => (

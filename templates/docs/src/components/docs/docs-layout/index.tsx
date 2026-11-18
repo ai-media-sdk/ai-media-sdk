@@ -70,7 +70,7 @@ export function DocsLayout({
         </div>
         <div className="flex gap-10 py-8">
           <aside className="hidden w-56 shrink-0 lg:block">
-            <div className="sticky top-8 max-h-[calc(100svh-4rem)]">
+            <div className="sticky top-8 h-[calc(100svh-4rem)] overflow-hidden">
               <DocsSidebar lang={lang} currentSlug={slug} />
             </div>
           </aside>
